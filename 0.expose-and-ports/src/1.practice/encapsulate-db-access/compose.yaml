@@ -4,6 +4,8 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: example
+    expose:
+      - 3306
 
   adminer:
     image: adminer
