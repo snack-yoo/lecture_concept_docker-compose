@@ -1,0 +1,31 @@
+services:
+  app-deepdive:
+    container_name: app-deepdive
+    image: nginx
+    volumes:
+      - ./templates:/etc/nginx/templates
+    environment:
+      - NGINX_PORT=8080
+#    ports:
+#      - "3000"                                # 0.0.0.0:52366->3000/tcp
+#      - "3000-3005"                           # 0.0.0.0:52402->3000/tcp, 0.0.0.0:52403->3001/tcp, 0.0.0.0:52404->3002/tcp, 0.0.0.0:52405->3003/tcp, 0.0.0.0:52406->3004/tcp, 0.0.0.0:52407->3005/tcp
+#      - "8000:8000"                           # 0.0.0.0:8000->8000/tcp
+#      - "9090-9091:8080-8081"                 # 0.0.0.0:9090->8080/tcp, 0.0.0.0:9091->8081/tcp
+#      - "49100:22"                            # 0.0.0.0:49100->22/tcp
+#      - "127.0.0.1:8001:8001"                 # 127.0.0.1:8001->8001/tcp
+#      - "127.0.0.1:5000-5010:5000-5010"       # 127.0.0.1:5000-5010->5000-5010/tcp
+#      - "127.0.0.1::5000"                     # 127.0.0.1:52599->5000/tcp
+#      - "6060:6060/udp"                       # 0.0.0.0:6060->6060/udp
+#      - "12400-12500:1240"                    # 0.0.0.0:12404->1240/tcp  💡12400-12500 범위 중 하나
+#      - "3002:3000/udp"                       # 0.0.0.0:3002->3000/udp
+
+#      - "12400:1240-1250"                     # * error decoding 'Ports': Invalid ranges specified for container and host Ports: 1240-1250 and 12400
+#      - "12400-12411:1240-1250"               # * error decoding 'Ports': Invalid ranges specified for container and host Ports: 1240-1250 and 12400-12411
+#      - "3002/udp:3000/udp"                   # * error decoding 'Ports': Invalid hostPort: 3002/udp
+
+#    ports:
+#      - target: 3000
+#        host_ip: 127.0.0.1
+#        published: 3002
+#        protocol: tcp
+#        mode: host
