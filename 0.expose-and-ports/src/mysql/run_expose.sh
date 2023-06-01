@@ -1,1 +1,0 @@
-docker compose -f compose.yaml -p expose-case up -d
